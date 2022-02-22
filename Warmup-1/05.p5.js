@@ -1,0 +1,34 @@
+/*
+ * Title: Problem 5
+ * Description: codingBat problem
+ * Author: Farhan Ahmed Nahid
+ * Date: 23/02/22
+ *
+ */
+
+/* 
+
+problem 5
+
+We have a loud talking parrot. The "hour" parameter is the current hour time in the range 0..23. We are in trouble if the parrot is talking and the hour is before 7 or after 20. Return True if we are in trouble.
+
+
+parrot_trouble(True, 6) → True
+parrot_trouble(True, 7) → False
+parrot_trouble(False, 6) → False
+
+*/
+
+const parrotTrouble = (talking, hour) => {
+  if (talking === false) {
+    return false;
+  } else if (hour < 7 || hour > 20) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+console.log(parrotTrouble(true, 6));
+console.log(parrotTrouble(true, 7));
+console.log(parrotTrouble(false, 6));
